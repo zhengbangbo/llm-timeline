@@ -68,21 +68,32 @@ class LLMTimeline extends HTMLElement {
                 
                 const dot = document.createElement('div');
                 dot.className = 'node-dot';
-                dot.style.backgroundColor = model.color;
+                if (model.estimated) {
+                    dot.classList.add('estimated');
+                    dot.style.borderColor = model.color;
+                    // Keep custom property mapping for ease of use
+                    dot.style.setProperty('--accent-color', model.color);
+                } else {
+                    dot.style.backgroundColor = model.color;
+                }
                 
                 const nameLabel = document.createElement('div');
                 nameLabel.className = 'node-label';
                 nameLabel.textContent = model.name;
+                if (model.estimated) {
+                    nameLabel.classList.add('estimated');
+                }
 
                 node.appendChild(dot);
                 node.appendChild(nameLabel);
 
                 // Events
                 const dateStr = modelDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+                const estimatedBadge = model.estimated ? '<span style="color:#ffcc00; font-size:0.7rem; margin-left:4px;">(推测)</span>' : '';
                 
                 node.addEventListener('mouseenter', (e) => {
                     tooltip.innerHTML = `
-                        <div style="font-weight:600; margin-bottom:2px;">${model.name}</div>
+                        <div style="font-weight:600; margin-bottom:2px;">${model.name}${estimatedBadge}</div>
                         <div style="opacity:0.8">${dateStr}</div>
                     `;
                     tooltip.classList.add('visible');
