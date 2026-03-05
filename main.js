@@ -88,7 +88,7 @@ class LLMTimeline extends HTMLElement {
                 node.appendChild(nameLabel);
 
                 // Events
-                const dateStr = modelDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+                const dateStr = modelDate.toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
                 const estimatedBadge = model.estimated ? '<span style="color:#ffcc00; font-size:0.7rem; margin-left:4px;">(Estimated)</span>' : '';
                 
                 node.addEventListener('mouseenter', (e) => {
@@ -107,13 +107,46 @@ class LLMTimeline extends HTMLElement {
                     tooltip.classList.remove('visible');
                 });
 
-
+                node.addEventListener('click', () => {
+                    const modal = document.getElementById('source-modal');
+                    const title = document.getElementById('modal-title');
+                    const dateInfo = document.getElementById('modal-date');
+                    const link = document.getElementById('modal-link');
+                    
+                    title.textContent = model.name;
+                    dateInfo.textContent = `Release Date): ${model.date}`;
+                    
+                    if (model.source) {
+                        link.href = model.source;
+                        link.textContent = '查看信息来源 (View Source)';
+                    } else {
+                        link.href = `https://www.google.com/search?q=${encodeURIComponent(model.name + " model release date")}`;
+                        link.textContent = '搜索信息来源 (Search Source)';
+                    }
+                    
+                    // Set accent color of the link to match the model
+                    link.style.backgroundColor = model.color;
+                    
+                    modal.style.display = 'block';
+                });
 
                 row.appendChild(node);
             });
 
             wrapper.appendChild(row);
         });
+
+        // Modal close logic
+        const modal = document.getElementById('source-modal');
+        const closeBtn = document.querySelector('.close-btn');
+        if (closeBtn && modal) {
+            closeBtn.onclick = () => modal.style.display = 'none';
+            window.onclick = (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            };
+        }
     }
 
     createGridLine(container, date, startDate, totalDuration, text) {
