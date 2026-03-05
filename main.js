@@ -89,7 +89,7 @@ class LLMTimeline extends HTMLElement {
 
                 // Events
                 const dateStr = modelDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-                const estimatedBadge = model.estimated ? '<span style="color:#ffcc00; font-size:0.7rem; margin-left:4px;">(推测)</span>' : '';
+                const estimatedBadge = model.estimated ? '<span style="color:#ffcc00; font-size:0.7rem; margin-left:4px;">(Estimated)</span>' : '';
                 
                 node.addEventListener('mouseenter', (e) => {
                     tooltip.innerHTML = `
