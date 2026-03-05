@@ -128,8 +128,15 @@ llm-timeline {
     width: 120px;
     color: #000;
     z-index: 10;
-    background: var(--bg-color);
-    padding-right: 15px;
+    text-shadow: 
+        -2px -2px 0 #fff,  
+         2px -2px 0 #fff,
+        -2px  2px 0 #fff,
+         2px  2px 0 #fff,
+         0px  2px 0 #fff,
+         2px  0px 0 #fff,
+         0px -2px 0 #fff,
+        -2px  0px 0 #fff;
 }
 
 .model-node {
