@@ -114,14 +114,14 @@ class LLMTimeline extends HTMLElement {
                     const link = document.getElementById('modal-link');
                     
                     title.textContent = model.name;
-                    dateInfo.textContent = `Release Date): ${model.date}`;
+                    dateInfo.textContent = `Release Date: ${model.date}`;
                     
                     if (model.source) {
                         link.href = model.source;
-                        link.textContent = '查看信息来源 (View Source)';
+                        link.textContent = 'View Source';
                     } else {
                         link.href = `https://www.google.com/search?q=${encodeURIComponent(model.name + " model release date")}`;
-                        link.textContent = '搜索信息来源 (Search Source)';
+                        link.textContent = 'Search Source';
                     }
                     
                     // Set accent color of the link to match the model
