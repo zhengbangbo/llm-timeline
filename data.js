@@ -6,6 +6,7 @@ window.MODELS = [
     { family: 'OpenAI', name: 'GPT-4o', date: '2024-05-13', color: 'var(--color-openai)' },
     { family: 'OpenAI', name: 'GPT-4.5', date: '2025-02-27', color: 'var(--color-openai)' }, 
     { family: 'OpenAI', name: 'GPT-5', date: '2025-08-07', color: 'var(--color-openai)' },   
+    { family: 'OpenAI', name: 'GPT-5.4', date: '2026-03-05', color: 'var(--color-openai)' },
 
     // Anthropic
     { family: 'Anthropic', name: 'Claude 1', date: '2023-03-14', color: 'var(--color-anthropic)' },
