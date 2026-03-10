@@ -14,6 +14,7 @@
     --color-deepseek: #4e80ee;
     --color-zhipu: #3478f6;
     --color-minimax: #d93025;
+    --color-moonshot: #14b8a6; /* Teal for Moonshot */
     --color-xai: #333333; /* Dark grey for xAI instead of white/black */
 }
 
@@ -128,15 +129,15 @@ llm-timeline {
     width: 120px;
     color: #000;
     z-index: 10;
-    text-shadow: 
-        -2px -2px 0 #fff,  
-         2px -2px 0 #fff,
-        -2px  2px 0 #fff,
-         2px  2px 0 #fff,
-         0px  2px 0 #fff,
-         2px  0px 0 #fff,
-         0px -2px 0 #fff,
-        -2px  0px 0 #fff;
+    text-shadow:
+        -2px -2px 0 #fff,
+        2px -2px 0 #fff,
+        -2px 2px 0 #fff,
+        2px 2px 0 #fff,
+        0px 2px 0 #fff,
+        2px 0px 0 #fff,
+        0px -2px 0 #fff,
+        -2px 0px 0 #fff;
 }
 
 .model-node {
@@ -265,14 +266,14 @@ llm-timeline {
 
 /* Modal Styles */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0,0,0,0.6); 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(2px);
 }
 
@@ -281,11 +282,11 @@ llm-timeline {
     margin: 15% auto;
     padding: 30px;
     border: 1px solid #ddd;
-    width: 90%; 
+    width: 90%;
     max-width: 450px;
     border-radius: 12px;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .close-btn {

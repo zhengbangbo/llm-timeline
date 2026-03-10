@@ -57,6 +57,12 @@ window.MODELS = [
     { family: 'Minimax', name: 'abab 6.5', date: '2024-04-17', color: 'var(--color-minimax)' },
     { family: 'Minimax', name: 'Minimax 2.5', date: '2026-02-12', color: 'var(--color-minimax)' },
 
+    // Moonshot AI
+    { family: 'Moonshot', name: 'Kimi', date: '2023-10-09', color: 'var(--color-moonshot)' },
+    { family: 'Moonshot', name: 'Kimi K1.5', date: '2025-01-20', color: 'var(--color-moonshot)' },
+    { family: 'Moonshot', name: 'Kimi K2', date: '2025-07-11', color: 'var(--color-moonshot)' },
+    { family: 'Moonshot', name: 'Kimi K2.5', date: '2026-01-27', color: 'var(--color-moonshot)' },
+
     // xAI
     { family: 'xAI', name: 'Grok-1', date: '2024-03-17', color: 'var(--color-xai)' },
     { family: 'xAI', name: 'Grok-1.5', date: '2024-03-29', color: 'var(--color-xai)' },
