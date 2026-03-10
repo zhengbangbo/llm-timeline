@@ -8,7 +8,7 @@ window.MODELS = [
     { family: 'OpenAI', name: 'GPT-5', date: '2025-08-07', color: 'var(--color-openai)' },   
     { family: 'OpenAI', name: 'GPT-5.1', date: '2025-11-12', color: 'var(--color-openai)' },
     { family: 'OpenAI', name: 'GPT-5.2', date: '2025-12-11', color: 'var(--color-openai)' },
-    { family: 'OpenAI', name: 'GPT-5.3', date: '2026-03-03', color: 'var(--color-openai)' },
+    { family: 'OpenAI', name: 'GPT-5.3', date: '2026-01-15', color: 'var(--color-openai)' },
     { family: 'OpenAI', name: 'GPT-5.4', date: '2026-03-05', color: 'var(--color-openai)' },
 
     // Anthropic
@@ -19,7 +19,8 @@ window.MODELS = [
     { family: 'Anthropic', name: 'Claude 3.5 Opus', date: '2024-10-15', color: 'var(--color-anthropic)', estimated: true },
     { family: 'Anthropic', name: 'Claude 4', date: '2025-05-22', color: 'var(--color-anthropic)' },
     { family: 'Anthropic', name: 'Claude 4.5', date: '2025-11-24', color: 'var(--color-anthropic)' },
-    { family: 'Anthropic', name: 'Claude 4.6', date: '2026-02-05', color: 'var(--color-anthropic)' },
+    { family: 'Anthropic', name: 'Claude 4.6 Opus', date: '2026-02-05', color: 'var(--color-anthropic)' },
+    { family: 'Anthropic', name: 'Claude 4.6 Sonnet', date: '2026-02-17', color: 'var(--color-anthropic)' },
 
     // Google
     { family: 'Google', name: 'PaLM 2', date: '2023-05-10', color: 'var(--color-google)' },
@@ -27,6 +28,8 @@ window.MODELS = [
     { family: 'Google', name: 'Gemini 1.5', date: '2024-02-15', color: 'var(--color-google)' },
     { family: 'Google', name: 'Gemini 2.0', date: '2025-02-05', color: 'var(--color-google)' },
     { family: 'Google', name: 'Gemini 3.0', date: '2025-11-18', color: 'var(--color-google)' },
+    { family: 'Google', name: 'Gemini 3.1 Pro', date: '2026-02-19', color: 'var(--color-google)' },
+    { family: 'Google', name: 'Gemini 3.1 Flash-Lite', date: '2026-03-03', color: 'var(--color-google)' },
 
     // Meta
     { family: 'Meta', name: 'Llama 2', date: '2023-07-18', color: 'var(--color-meta)' },
@@ -45,7 +48,7 @@ window.MODELS = [
     { family: 'DeepSeek', name: 'DeepSeek V2', date: '2024-05-06', color: 'var(--color-deepseek)' },
     { family: 'DeepSeek', name: 'DeepSeek V2.5', date: '2024-09-05', color: 'var(--color-deepseek)' },
     { family: 'DeepSeek', name: 'DeepSeek V3', date: '2024-12-26', color: 'var(--color-deepseek)' },
-    { family: 'DeepSeek', name: 'DeepSeek V4', date: '2026-03-05', color: 'var(--color-deepseek)', estimated: true },
+    { family: 'DeepSeek', name: 'DeepSeek V4', date: '2026-01-20', color: 'var(--color-deepseek)' },
 
     // Zhipu AI
     { family: 'Zhipu AI', name: 'ChatGLM-3', date: '2023-10-27', color: 'var(--color-zhipu)' },
@@ -68,5 +71,5 @@ window.MODELS = [
     { family: 'xAI', name: 'Grok-1.5', date: '2024-03-29', color: 'var(--color-xai)' },
     { family: 'xAI', name: 'Grok-2', date: '2024-08-14', color: 'var(--color-xai)' },
     { family: 'xAI', name: 'Grok-3', date: '2025-02-17', color: 'var(--color-xai)' },
-    { family: 'xAI', name: 'Grok-4.2', date: '2026-02-17', color: 'var(--color-xai)' },
+    { family: 'xAI', name: 'Grok-4', date: '2026-02-17', color: 'var(--color-xai)' },
 ];
