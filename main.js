@@ -19,8 +19,11 @@ class LLMTimeline extends HTMLElement {
         this.appendChild(wrapper);
 
         // Time range
-        const startDate = new Date('2022-10-01');
-        const endDate = new Date('2026-04-01');
+        const startDate = new Date('2022-10-01T00:00:00');
+        const latestModelDate = Math.max(...this.models.map(model => new Date(`${model.date}T00:00:00`).getTime()));
+        const endDate = new Date(latestModelDate);
+        endDate.setMonth(endDate.getMonth() + 2);
+        endDate.setDate(1);
         const totalDuration = endDate - startDate;
 
         const families = [...new Set(this.models.map(m => m.family))];
